@@ -1,3 +1,3 @@
 export class Token{
-    public atrToken: String;
+    public atrToken: string;
 }

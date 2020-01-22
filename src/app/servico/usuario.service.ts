@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../model/Usuario';
 
 @Injectable({
@@ -9,6 +9,6 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) { }
   public autenticar(usuario: Usuario){
-    return this.http.post("http://local:8080/login",usuario);
+    return this.http.post("http://localhost:8080/login",usuario);
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -11,7 +11,7 @@ export class ProdutoService {
 
   public getAllProduto(){
     let token = localStorage.getItem("edyToken");
-    return this.http.get("http://localhost:8080/produto/todo?token=" + token);
+    return this.http.get("http://localhost:8080/produto/todos?token=" + token);
   }
 }
 
